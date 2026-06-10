@@ -1,0 +1,6 @@
+id=onyx-camera-fix
+name=Redmi Turbo 4 Pro Camera Driver Fix
+version=v1.0
+versionCode=1
+author=Community
+description=Systemlessly injects missing multi-source camera vendor drivers (_ii blobs) and patches SELinux constraints on Global/India ROMs.

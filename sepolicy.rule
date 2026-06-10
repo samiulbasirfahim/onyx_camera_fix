@@ -1,0 +1,20 @@
+# Allow camera HAL to read hardware properties
+allow hal_camera_default vendor_camera_prop file { read open getattr }
+allow hal_camera_default vendor_system_prop file { read open getattr }
+
+# Allow camera to access required data paths
+allow hal_camera_default shell_data_file dir search
+allow hal_camera_default system_data_file dir search
+
+# Allow camera manager/engine app to find background services
+allow untrusted_app_all vendor_perf_service service_manager find
+allow untrusted_app_all scenariorecognition_service service_manager find
+allow untrusted_app_all MiuiForceVkService service_manager find
+
+# Allow init to set mandatory camera configurations on boot
+allow init vendor_camera_prop property_service set
+
+# Allow persistent security engine to parse calibration data from persist partition
+allow hal_mtdservice_default mnt_vendor_file dir search
+allow hal_mtdservice_default persist_camera_file dir search
+allow hal_mtdservice_default persist_camera_file file { read open getattr }
