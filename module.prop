@@ -1,6 +1,6 @@
 id=onyx-camera-fix
-name=Redmi Turbo 4 Pro Dual-Camera Fix
+name=Redmi Turbo 4 Pro Camera Fix
 version=v1.0
 versionCode=1
 author=Samiul Basir Fahim
-description=Systemlessly restores camera operation on Global/India ROMs. Fixes broken hardware mapping caused by non-CN firmware omitting drivers for specific Turbo 4 Pro hardware sensor batches. Injects missing vendor drivers (_ii blobs) and patches SELinux constraints.
+description=Fixes non-functional cameras on Global/India ROMs for Redmi Turbo 4 Pro units manufactured with second-batch hardware (AAC IMX882, Sunny OV08F, Sunny OV20B40 sensors). These units ship with CN-only vendor drivers that Global/India firmware omits, causing all cameras to fail at HAL initialization. This module systemlessly injects the missing _ii sensor module and tuning blobs into the vendor partition overlay and patches SELinux policy to allow the camera HAL to load them. No system partition is modified. Safe to uninstall.
