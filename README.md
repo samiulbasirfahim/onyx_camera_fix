@@ -22,7 +22,7 @@ This KernelSU module fixes that by injecting the missing drivers directly into t
 
 ## Known limitation
 
-The main wide camera behaves like a macro lens — it focuses sharply up close but goes blurry beyond roughly 1-2 feet.
+The main wide camera behaves like a macro lens [Only in hyperos, aosp rom works fine] — it focuses sharply up close but goes blurry beyond roughly 1-2 feet.
 Couldn't find a way to fix this, so I decided to release the module anyway, looking for someone with more expertise to take a look at it. The front and ultrawide cameras work perfectly fine, so the device is still fully usable with this limitation.
 
 ---
